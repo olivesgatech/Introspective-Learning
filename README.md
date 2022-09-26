@@ -3,11 +3,11 @@ Code used in the paper [Introspective Learning : A Two-Stage Approach for Infere
 
 M. Prabhushankar and G. AlRegib, "Introspective Learning : A Two-Stage Approach for Inference in Neural Networks" Advances in Neural Information Processing Systems (2022), Nov 29 - Dec 1, 2022.
 
+![Introspective Explanations](Explanations.png) 
+
 **Abstract** 
 
 In this paper, we advocate for two stages in a neural network's decision making process. The first is the existing feed-forward inference framework where patterns in given data are sensed and associated with previously learned patterns. The second stage is a slower reflection stage where we ask the network to reflect on its feed-forward decision by considering and evaluating all available choices. Together, we term the two stages as introspective learning. We use gradients of trained neural networks as a measurement of this reflection. A simple three-layered Multi Layer Perceptron is used as the second stage that predicts based on all extracted gradient features. We perceptually visualize the post-hoc explanations from both stages to provide a visual grounding to introspection. For the application of recognition, we show that an introspective network is 4% more robust and 42% less prone to calibration errors when generalizing to noisy data. We also illustrate the value of introspective networks in downstream tasks that require generalizability and calibration including active learning, out-of-distribution detection, and uncertainty estimation. Finally, we ground the proposed machine introspection to human introspection for the application of image quality assessment.
-
-![Introspective Explanations](Explanations.png) 
 
 **Paper** : [Introspective Learning : A Two-Stage Approach for Inference in Neural Networks](https://arxiv.org/pdf/2209.08425.pdf)
 
