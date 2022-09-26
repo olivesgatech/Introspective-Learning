@@ -13,14 +13,14 @@ In this paper, we advocate for two stages in a neural network's decision making 
 
 ## Usage 
 
-**Version 1** (September 26 2022): The function methods.py consists of classes for [GradCAM](https://arxiv.org/abs/1610.02391) (sensing explanations), [CounterfactualCAM](https://arxiv.org/abs/1610.02391) (observed counterfactuals), and [ContrastCAM](https://arxiv.org/abs/2008.00178) (observed contrast). All these methods are called from the main.py function for any of ResNet, VGG16, Densenet, AlexNet, and SqueezeNet architectures.
+**Update 1: Introspective Explanations** (September 26 2022): The function methods.py consists of classes for [GradCAM](https://arxiv.org/abs/1610.02391) (sensing explanations), and [ContrastCAM](https://arxiv.org/abs/2008.00178) (introspective explanations). Both methods are called from the main.py function for any of ResNet, VGG16, Densenet, AlexNet, and SqueezeNet architectures. Note that the Introspective Explanations are a specific kind of introspection that answers contrastive questions of the form *Why P, rather than Q?*. Other forms of introspection may include answering counterfactual questions of the form *What if?* paradigm. For a detailed analysis and description of obserrved correlations, counterfactuals, and contrastive, please see [Explanatory Paradigms in Neural Networks](https://arxiv.org/abs/2202.11838).
 
 1. Select the pretrained model in line 58 of main.py
 2. Choose the appropriate model_dict from lines 60-68. For your own model, please define the target layer within utils.py. Tip: Last convolution layer is generally better since it has the maximum amount of semantic information
 3. By default, the GradCAM and CounterfactualCAM results are displayed for the predicted. If you want to see results for another class, please pass the class number as an arguement within gradcam and counterfactualCAM classes in Lines 74 and 87.
 4. By default the ContrastCAM shows results for a class *Q* that has the second highest probability of prediction. If you want to see results for another class, please pass the class number as an arguement within contrastCAM class in Line 81.
 
-
+**Update 2: Introspective Features** Coming soon 
 ## Citation 
 
 Please cite following two paper if this code is used: 
